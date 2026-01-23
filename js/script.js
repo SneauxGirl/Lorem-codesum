@@ -2,6 +2,9 @@
 // It does not evaluate, execute, or summon anything.
 // It only moves text from one safe place to another.
 
+console.log("🚀 SCRIPT.JS IS LOADING!");
+console.log("====================");
+
 // ==========================================
 // MAP LANGUAGES - LOAD TEMPLATES
 // ==========================================
