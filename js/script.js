@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Tab click handling
     tabs.forEach(tab => {
       tab.addEventListener("click", () => {
-          const language = tab.ddataset.language;
+          const language = tab.dataset.language; //In case you wonder if I'm just vibecoding. Prior typo. Right here.
 
           // Remove all active states
           tabs.forEach(t => t.classList.remove("code-container__tab--active"));
