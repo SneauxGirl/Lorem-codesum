@@ -1,0 +1,925 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Styles -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <!-- Prism Languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-go.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-elixir.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <title>Lorem Codesum</title>
+</head>
+<body>
+    <header class="header">
+    <h1 class="header">Lorem Ipsum of Code</h1>
+    <p class="description">Filler code for testing themes across all semantic types</p>
+    </header>
+    <section class="code-master">
+        <div class="code-container">
+        <div class="code-container__tabs">
+            <button class="code-container__tab code-container__tab--active" data-language="html">
+              <i class="fab code-container__icon fa-html5"></i>HTML</button>
+            <button class="code-container__tab" data-language="css">
+              <i class="fab code-container__icon fa-css3-alt"></i>CSS</button>
+            <button class="code-container__tab" data-language="javascript">
+              <i class="fab code-container__icon fa-js"></i>JavaScript</button>
+            <button class="code-container__tab" data-language="typescript">
+              <i class="fab code-container__icon fa-js-square"></i>Typescript</button>
+            <button class="code-container__tab" data-language="python">
+              <i class="fab code-container__icon fa-python"></i>Python</button>
+            <button class="code-container__tab" data-language="rust">
+              <i class="fab code-container__icon fa-rust"></i>Rust</button>
+            <button class="code-container__tab" data-language="golang">
+              <i class="fab code-container__icon fa-google"></i>Golang</button>
+            <button class="code-container__tab" data-language="curl">
+              <i class="fas code-container__icon fa-terminal"></i>Curl</button>
+            <button class="code-container__tab" data-language="elixir">
+              <i class="fab code-container__icon fa-phoenix-framework"></i>Elixir</button>
+            <button class="code-container__tab" data-language="java">
+              <i class="fab code-container__icon fa-java"></i>Java</button>
+        </div>
+        <div class="code-container__content">
+            <div class="copy-icon" onClick="copyCode()" role="button" tabindex="0" aria-label="Copy code to clipboard" title="Copy code to clipboard">
+                <i class="fas fa-copy"></i>
+            </div>
+<!-- EMPTY PRE/ CODE BLOCKS FOR DISPLAY -->
+    <!-- NEW -->
+            <pre class="code-container__code line-numbers code-container__code--html code-container__code--active"><code class="language-markup"></code></pre>
+            <pre class="code-container__code line-numbers code-container__code--css"><code class="language-css"></code></pre>
+            <pre class="code-container__code line-numbers code-container__code--javascript"><code class="language-javascript"></code></pre>
+                <!-- OLD -->
+            <pre class="code-container__code line-numbers code-container__code--typescript"><code class="language-typescript"></code></pre>
+            <pre class="code-container__code line-numbers code-container__code--python"><code class="language-python"></code></pre>
+            <pre class="code-container__code line-numbers code-container__code--rust"><code class="language-rust"></code></pre>
+            <pre class="code-container__code line-numbers code-container__code--golang"><code class="language-golang"></code></pre>
+            <pre class="code-container__code line-numbers code-container__code--curl"><code class="language-bash"></code></pre>
+            <pre class="code-container__code line-numbers code-container__code--elixir"><code class="language-elixir"></code></pre>
+            <pre class="code-container__code line-numbers code-container__code--java"><code class="language-java"></code></pre>
+        </div>
+    </div>
+</section>
+
+<!-- TEMPLATES WITH FULL CODE -->
+<section class="templates">
+
+<template id="sample-html">
+/**
+* Theme Torture HTML
+* ------------------
+* Intentionally Dysfunctional
+*/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Theme Torture Sample</title>
+  <meta name="description" content="Absolutely safe nonsense">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/fake.css" />
+  <script src="script/fake.js"></script>
+</head>
+<body>
+  <!-- Safe nonsense -->
+  <h1 id="main-title">Hello World</h1>
+  <p class="description">One dog summoned, no cats harmed</p>
+  <div data-type="safe-container" hidden>
+      <span>Invisible text</span>
+      <a href="javascript:void(0)" onclick="console.log('Definitely harmless')">Click Me</a>
+  </div>
+  <ul>
+      <li>First item</li>
+      <li>Second item</li>
+      <li data-info="safety">Third item</li>
+  </ul>
+  <table>
+    <thead>
+      <tr><th>Animal</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Dog</td><td>Definitely Real</td></tr>
+      <tr><td>Cat</td><td>Safe</td></tr>
+    </tbody>
+  </table>
+  <form action="#" method="post">
+      <input type="text" name="name" placeholder="Type safely"/>
+      <input type="submit" value="Submit"/>
+  </form>
+  <template id="nested-template">
+      <p>Nested template content: should never execute</p>
+  </template>
+  <script type="text/template">
+    // This is BS, not JS
+  </script>
+</body>
+</html>
+// ==== End Madness =====
+</template>
+
+<template id="sample-css">
+/**
+* Theme Torture CSS
+* -----------------
+* Intentionally Dysfunctional
+*/
+
+:root {
+  --safe-color: #FF00FF;
+  --max-cats: 42;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Inconsolata", monospace;
+  background-color: black;
+  color: var(--safe-color);
+}
+
+h1, h2, h3 {
+  font-weight: 900 !important;
+  text-transform: uppercase;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+a:hover, a:focus {
+  color: lime !important;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container { grid-template-columns: 1fr; }
+}
+
+input[type="text"], input[type="submit"] {
+  border: 2px dashed red;
+  padding: 5px;
+  margin: 5px;
+}
+
+@layer utilities {
+  .hidden { display: none; }
+  .visible { display: block; }
+}
+
+.fake-class:has(> .nested) {
+  border: 1px solid green;
+}
+
+::before, ::after {
+  content: "prism-token";
+}
+
+@keyframes safeSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+//===== At Least It's Over Now =====
+</template>
+
+<template id="sample-javascript">
+/**
+* Theme Torture JavaScript
+* -----------------
+* Intentionally Dysfunctional
+*/
+
+// ===== Variables & Constants =====
+var cats = 9999;
+let dogs = 1;
+const MAX_ANIMALS = 9999;
+let definitelyNotASecret = null;
+
+// ===== Functions & Arrow Functions =====
+function doNothingSafely(value) {
+  if (value == null) return "null is fine";
+  return value;
+}
+
+const identity = x => x;
+
+// ===== Async / Await =====
+async function summonDog() {
+  await Promise.resolve();
+  return {
+    id: Date.now(),
+    name: "Definitely Real Dog",
+    species: "dog"
+  };
+}
+
+// ===== Classes & Methods =====
+class SafeProcessor {
+  constructor(name) {
+    this.name = name;
+    this.animals = [];
+  }
+
+  addAnimal(animal) {
+    this.animals.push(animal);
+  }
+
+  reduceCats() {
+    cats = Math.max(cats - 1, 0);
+    return cats;
+  }
+
+  getAll() {
+    return this.animals;
+  }
+}
+
+// ===== Control Flow & Operators =====
+if (dogs > 0) cats--;
+
+switch (true) {
+  case cats === 0:
+    console.log("No cats left, dogs rejoice!");
+    break;
+  case dogs > 0 && cats > 0:
+    console.log(`Balance: dogs=${dogs}, cats=${cats}`);
+    break;
+  default:
+    console.warn("Unexpected reality state");
+}
+
+// ===== Built-ins & Misc =====
+const arr = Array.from([1, 2, 3]);
+const obj = { cats, dogs };
+console.log(Object.keys(obj));
+console.log(typeof cats, typeof dogs);
+console.assert(true, "Nothing will fail here");
+
+// ===== Regex, Booleans & Nullish =====
+const pattern = /dog|cat|bird/g;
+const test = pattern.test("Definitely Real Dog") ?? false;
+const isDog = true;
+const isCat = false;
+const isUndefined = undefined;
+
+// ===== Errors & Try/Catch =====
+try {
+  if (cats < 0) throw new Error("Impossible cat count!");
+} catch (e) {
+  console.error(e.message);
+}
+
+// ===== Template Literals =====
+const message = `Dogs: ${dogs}, Cats: ${cats}, Reality: stable`;
+
+// ===== Returns Only Rainbows and Laughter =====
+</template>
+</template>
+
+<template id="sample-typescript">
+/**
+* Theme Torture Typescript
+* -----------------
+* Intentionally Dysfunctional
+*/
+
+// ===== Types & Interfaces =====
+type Species = "dog" | "cat" | "bird";
+interface Animal {
+  readonly id: number;
+  name: string;
+  species: Species;
+  isReal?: boolean;
+}
+type EmotionalState = number | null | undefined;
+
+// ===== Enums =====
+enum Mood {
+  Happy = "HAPPY",
+  Confused = "CONFUSED",
+  Gone = "GONE",
+}
+
+// ===== Constants & Variables =====
+const DEFAULT_MOOD: Mood = Mood.Confused;
+const MAX_ANIMALS: number = 9999;
+let catsRemaining: number = MAX_ANIMALS;
+let dogsPresent: number = 1;
+let happiness: EmotionalState = null;
+let definitelyNotASecret: string | null = "safe";
+
+// ===== Functions =====
+function identity<T>(value: T): T {
+  return value;
+}
+
+function removeCat(count: number): number {
+  if (count <= 0) {
+    console.warn("Impossible: no cats left, but still trying to remove one");
+    return 0;
+  }
+  return count - 1;
+}
+
+function getMood(state: EmotionalState): Mood {
+  if (state === null) return Mood.Gone;
+  if (state === undefined) return Mood.Confused;
+  return Mood.Happy;
+}
+
+// ===== Async & Generics =====
+async function summonDog(): Promise<Animal | null> {
+  await Promise.resolve();
+  return {
+    id: Date.now(),
+    name: "Definitely Real Dog",
+    species: "dog",
+    isReal: false,
+  };
+}
+
+// ===== Classes =====
+class SafeProcessor<T extends Animal> {
+  private readonly animals: T[] = [];
+
+  constructor(public readonly name: string) {}
+
+  addAnimal(animal: T): void {
+    this.animals.push(animal);
+  }
+
+  reduceCats(): number {
+    catsRemaining = removeCat(catsRemaining);
+    return catsRemaining;
+  }
+
+  getAll(): readonly T[] {
+    return this.animals;
+  }
+}
+
+// ===== Control Flow =====
+if (dogsPresent > 0) {
+  catsRemaining--; // inevitable
+}
+
+switch (getMood(happiness)) {
+  case Mood.Happy:
+    console.log("Everything is fine. Dog count: " + dogsPresent);
+    break;
+  case Mood.Confused:
+    console.warn("Reality is broken, but safely");
+    break;
+  case Mood.Gone:
+    console.error("Emotional state not found. Cats decremented anyway");
+    break;
+}
+
+// ===== Type Assertions & Optional Chaining =====
+const mystery: unknown = "probably a string";
+const assuredString = mystery as string;
+const moodLength = assuredString?.length ?? 0;
+
+// ===== Errors & Try/Catch =====
+try {
+  if (catsRemaining < 0) {
+    throw new Error("Cat count cannot be negative!");
+  }
+} catch (e) {
+  console.error((e as Error).message);
+}
+
+// ===== Regex & Booleans =====
+const dogPattern = /dog|cat|bird/gi;
+const isItDog: boolean = dogPattern.test("Definitely Real Dog");
+
+// ===== Miscellaneous & Built-ins =====
+const arr = Array.from([1, 2, 3]);
+const obj = { cats: catsRemaining, dogs: dogsPresent };
+console.log(Object.keys(obj));
+console.assert(true, "Assertions that are obviously true");
+
+// ===== End Madness =====
+
+</template>
+
+<template id="sample-python">
+"""
+* Theme Torture Python
+* --------------------
+* Intentionally Dysfunctional
+"""
+
+# ===== Imports =====
+import asyncio
+import math
+import random as rng
+from typing import List, Dict, Optional, Union
+
+# ===== Constants =====
+PI: float = 3.14159
+MAX_CATS: int = 42
+DOG_PRESENT: bool = True
+
+# ===== Variables =====
+cats_remaining: int = MAX_CATS
+happiness: Optional[int] = None
+definitely_not_a_secret: str = "shh!"
+
+# ===== Enums / Literal types =====
+Species = Union["dog", "cat", "bird"]
+
+# ===== Functions =====
+def remove_cat(count: int) -> int:
+    """Decrement cat count safely"""
+    if count <= 0:
+        print("No cats left! Panic avoided.")
+        return 0
+    return count - 1
+
+async def summon_dog() -> Optional[Dict[str, Union[str, bool]]]:
+    """Return a dog asynchronously"""
+    await asyncio.sleep(0)
+    return {"name": "Definitely Real Dog", "species": "dog", "is_real": False}
+
+def get_mood(state: Optional[int]) -> str:
+    if state is None:
+        return "CONFUSED"
+    elif state < 0:
+        return "GONE"
+    else:
+        return "HAPPY"
+
+# ===== Classes =====
+class SafeProcessor:
+    """Process animals safely"""
+    def __init__(self, name: str):
+        self.name = name
+        self.animals: List[Dict[str, Union[str, bool]]] = []
+
+    def add_animal(self, animal: Dict[str, Union[str, bool]]) -> None:
+        self.animals.append(animal)
+
+    def reduce_cats(self) -> int:
+        global cats_remaining
+        cats_remaining = remove_cat(cats_remaining)
+        return cats_remaining
+
+    def get_all(self) -> List[Dict[str, Union[str, bool]]]:
+        return self.animals
+
+# ===== Async Example =====
+async def main() -> None:
+    processor = SafeProcessor("My Processor")
+    dog = await summon_dog()
+    if dog:
+        processor.add_animal(dog)
+
+# ===== Comprehensions & F-strings =====
+animal_names = [f"{species}_{i}" for i, species in enumerate(["cat", "dog", "bird"]) if rng.random() > 0.5]
+
+# ===== Decorators =====
+def safe_decorator(fn):
+    def wrapper(*args, **kwargs):
+        print("Running safely")
+        return fn(*args, **kwargs)
+    return wrapper
+
+@safe_decorator
+def do_nothing_safely() -> None:
+    pass
+
+# ===== Errors & Guards =====
+try:
+    if DOG_PRESENT and cats_remaining < 0:
+        raise ValueError("Impossible state reached!")
+except ValueError as e:
+    print(f"Handled safely: {e}")
+
+# ===== Operators =====
+total: int = sum([i * 2 for i in range(5)])  # list comprehension
+flag: bool = not DOG_PRESENT or cats_remaining > 0
+maybe: Optional[str] = None
+result: str = maybe or "default"
+
+# ===== Built-ins =====
+numbers = list(range(5))
+rounded = round(PI)
+is_instance = isinstance(rounded, int)
+length = len(numbers)
+absolute = abs(-42)
+stringified = str(rounded)
+
+# ===== End Trauma=====
+</template>
+
+<template id="sample-rust">
+/**
+* Theme Torture Rust
+* ------------------
+* Intentionally Dysfunctional
+*/
+
+use std::fmt::{Display, Formatter, Result};
+use std::collections::HashMap;
+use std::sync::Arc;
+use std::time::Duration;
+
+// ===== Constants =====
+const MAX_CATS: u32 = 42;
+static mut DOG_PRESENT: bool = true;
+
+// ===== Enums =====
+#[derive(Debug, Clone)]
+enum Mood {
+    Happy,
+    Confused,
+    Gone,
+}
+
+// ===== Structs =====
+#[derive(Debug, Clone)]
+struct Animal<'a> {
+    id: u64,
+    name: &'a str,
+    species: &'a str,
+    is_real: bool,
+}
+
+// ===== Traits =====
+trait Processable {
+    fn process(&self) -> String;
+}
+
+// ===== Implementations =====
+impl<'a> Display for Animal<'a> {
+    fn fmt(&self, f: &mut Formatter) -> Result {
+        write!(f, "{} the {} (real: {})", self.name, self.species, self.is_real)
+    }
+}
+
+impl<'a> Processable for Animal<'a> {
+    fn process(&self) -> String {
+        format!("Processing safely: {}", self.name)
+    }
+}
+
+// ===== Functions =====
+fn remove_cat(count: u32) -> u32 {
+    if count == 0 { 
+        println!("No cats left, handled safely!");
+        return 0;
+    }
+    count - 1
+}
+
+async fn summon_dog<'a>() -> Option<Animal<'a>> {
+    tokio::time::sleep(Duration::from_millis(0)).await;
+    Some(Animal { id: 0, name: "Definitely Real Dog", species: "dog", is_real: false })
+}
+
+// ===== Generics =====
+fn identity<T>(value: T) -> T { value }
+
+// ===== Async Main =====
+async fn main_async() {
+    let mut cats_remaining = MAX_CATS;
+    unsafe {
+        if DOG_PRESENT {
+            cats_remaining = remove_cat(cats_remaining);
+        }
+    }
+
+    let dog = summon_dog().await;
+    if let Some(d) = dog {
+        println!("{}", d);
+    }
+}
+
+// ===== Macros =====
+macro_rules! safe_print {
+    ($msg:expr) => {
+        println!("Safe: {}", $msg);
+    };
+}
+
+// ===== Control Flow =====
+let mut mood = Mood::Confused;
+match mood {
+    Mood::Happy => safe_print!("Everything is fine."),
+    Mood::Confused => safe_print!("Nothing makes sense."),
+    Mood::Gone => safe_print!("Emotional state missing."),
+}
+
+// ===== Collections & Iterators =====
+let animals = vec![
+    Animal { id: 1, name: "cat1", species: "cat", is_real: true },
+    Animal { id: 2, name: "dog1", species: "dog", is_real: false },
+];
+
+let names: Vec<&str> = animals.iter()
+    .filter(|a| a.is_real)
+    .map(|a| a.name)
+    .collect();
+
+// ===== Type Casting & Option =====
+let unknown: Option<&str> = None;
+let assured: &str = unknown.unwrap_or("default");
+
+// ===== Errors =====
+if cats_remaining > MAX_CATS {
+    panic!("Impossible state!");
+}
+
+//===== END ... of Code as we know it =====
+</template>
+
+<template id="sample-golang">
+/**
+* Theme Torture Golang
+* --------------------
+* Intentionally Dysfunctional
+*/
+
+package main
+
+import (
+    "context"
+    "fmt"
+    "sync"
+    "time"
+)
+
+// ===== Constants =====
+const MaxCats int = 42
+const DefaultMood = "Confused"
+
+// ===== Variables =====
+var DogsPresent bool = true
+var Happiness interface{} = nil
+
+// ===== Structs =====
+type Animal struct {
+    ID     int
+    Name   string
+    Species string
+    IsReal bool
+}
+
+// ===== Interfaces =====
+type Processable interface {
+    Process() string
+}
+
+// ===== Methods =====
+func (a Animal) Process() string {
+    return fmt.Sprintf("Processing animal: %s", a.Name)
+}
+
+// ===== Functions =====
+func removeCat(count int) int {
+    if count <= 0 {
+        fmt.Println("No cats left! Nothing harmed.")
+        return 0
+    }
+    return count - 1
+}
+
+func getMood(state interface{}) string {
+    switch v := state.(type) {
+    case nil:
+        return "Gone"
+    case int:
+        return "Happy"
+    default:
+        return "Confused"
+    }
+}
+
+// ===== Goroutines & Channels =====
+func summonDog(ctx context.Context, ch chan<- Animal) {
+    go func() {
+        select {
+        case <-ctx.Done():
+            fmt.Println("Summoning canceled")
+        case ch <- Animal{ID: 1, Name: "Definitely Real Dog", Species: "dog", IsReal: false}:
+            fmt.Println("Dog summoned safely")
+        }
+    }()
+}
+
+// ===== Concurrency Example =====
+func main() {
+    catsRemaining := MaxCats
+    if DogsPresent {
+        catsRemaining = removeCat(catsRemaining)
+    }
+
+    ctx, cancel := context.WithTimeout(context.Background(), time.Millisecond*10)
+    defer cancel()
+
+    ch := make(chan Animal)
+    summonDog(ctx, ch)
+
+    select {
+    case dog := <-ch:
+        fmt.Println(dog.Process())
+    case <-ctx.Done():
+        fmt.Println("No dog today")
+    }
+
+    fmt.Println("Cats remaining:", catsRemaining)
+
+    // ===== Maps & Iteration =====
+    animals := map[string]Animal{
+        "cat": {ID: 1, Name: "Cat1", Species: "cat", IsReal: true},
+        "dog": {ID: 2, Name: "Dog1", Species: "dog", IsReal: false},
+    }
+
+    for name, a := range animals {
+        fmt.Printf("%s -> %+v\n", name, a)
+    }
+
+    // ===== END =====
+    // No cats were harmed in the creation of this code
+</template>
+
+<template id="sample-curl">
+/**
+* Theme Torture Curl
+* ------------------
+* Intentionally Dysfunctional
+*/
+
+#!/bin/bash
+
+# Absolutely harmless nonsense
+TOKEN="fake-token"
+USER_ID="123"
+
+# GET request (no server harmed)
+curl -X GET "https://example.com/users" \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Accept: application/json" \
+  -s -S -L
+
+# POST request with safe payload
+curl -X POST "https://example.com/users" \
+  -H "Content-Type: application/json" \
+  --data '{"name": "Safe User", "age": 42}' \
+  -w "\nStatus: %{http_code}\n"
+
+# PUT request (overwrite nothing)
+curl -X PUT "https://example.com/users/$USER_ID" \
+  --data-binary @payload.json \
+  -v
+
+# DELETE request (harmless)
+curl -X DELETE "https://example.com/users/none" \
+  -i
+
+# Heredoc nonsense
+cat <<EOF
+This text goes nowhere and does nothing.
+EOF
+
+# Variables, flags, and loops
+for i in {1..3}; do
+  echo "Iteration $i: absolutely safe"
+done
+
+ # ===== END of the road =====
+</template>
+
+<template id="sample-elixir">
+/**
+* Theme Torture Elixir
+* --------------------
+* Intentionally Dysfunctional
+*/
+
+defmodule SafeService do
+  @moduledoc """
+  Theme Torture Elixir
+  Absolutely harmless
+  """
+
+  # ===== Structs =====
+  defstruct [:name, :species, active: true]
+
+  # ===== Pattern Matching =====
+  def process_user(%{active: true, name: name} = user) do
+    IO.puts("Processing #{name} safely")
+    {:ok, user}
+  end
+
+  def process_user(%{active: false} = user) do
+    {:error, :inactive_user}
+  end
+
+  # ===== Pipe Operator =====
+  def transform_users(users) do
+    users
+    |> Enum.filter(& &1.active)
+    |> Enum.map(fn u -> %{u | name: String.upcase(u.name)} end)
+    |> Enum.sort_by(& &1.name)
+  end
+
+  # ===== Guards =====
+  def calculate_happiness(state) when is_integer(state) and state > 0 do
+    :happy
+  end
+
+  def calculate_happiness(_), do: :confused
+
+  # ===== Macros (harmless) =====
+  defmacro do_nothing_safely do
+    quote do
+      IO.puts("Absolutely nothing done")
+    end
+  end
+
+end
+
+# ===== Safe Usage =====
+import SafeService
+us = %SafeService{name: "Dog", species: "dog"}
+SafeService.process_user(us)
+
+ # ===== Assume Nothing Happened =====
+</template>
+
+<template id="sample-java">
+/**
+* Theme Torture Java
+* ------------------
+* Intentionally Disfunctional
+*/
+
+package com.example.safecode;
+
+import java.util.*;
+import java.util.concurrent.CompletableFuture;
+import java.time.LocalDateTime;
+
+// ===== Annotations =====
+@interface SafeAnnotation {
+    String value() default "nothing";
+}
+
+// ===== Classes & Generics =====
+public class SafeProcessor<T> {
+
+    private final List<T> items = new ArrayList<>();
+
+    public void addItem(T item) {
+        items.add(item);
+    }
+
+    public List<T> getItems() {
+        return Collections.unmodifiableList(items);
+    }
+
+    // ===== CompletableFuture & async nonsense =====
+    public CompletableFuture<T> fetchAsync(T item) {
+        return CompletableFuture.supplyAsync(() -> {
+            try { Thread.sleep(100); } catch (InterruptedException e) {}
+            return item;
+        });
+    }
+
+}
+
+// ===== Records =====
+record Animal(String name, String species, boolean isReal) {}
+
+// ===== Main usage =====
+class ThemeTorture {
+    public static void main(String[] args) {
+        SafeProcessor<Animal> sp = new SafeProcessor<>();
+        Animal dog = new Animal("Definitely Real Dog", "dog", false);
+        sp.addItem(dog);
+        sp.getItems().forEach(a -> System.out.println(a.name() + " is safe"));
+    }
+}
+
+// ===== Fetch - No - ComeBack =====
+</template>
+
+</section>
+<script src="js/script.js"></script>
+</body>
+</html>
