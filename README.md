@@ -1,13 +1,10 @@
-Lorem Codesum is a theme tester for eleven different codes - once it works.
-Turns out HTML is that kid who hears everything and takes it all literally. All of it.
+Lorem Codesum is a theme tester for eleven different codes.
 
 Base concept came from my make-it-decaf project, a code switcher landing page with a customized theme.
-Started this build in my cheatsheets file, as a simple reference, but it outgrew that so here we are.
+Started this build in my cheatsheets file, as a simple reference, but it grew into its own project.
 
-At initial commit I am using the code-container structure from make-it-decaf,
-swapped from pre alone to a pre/template combination,
-built a safe and robust "torture template" for each language,
-additional future-proofing with language name assignment in Javascript.
+Added HTML, CSS, and JS to the original eight languages.
+Ran into some issues with HTML being that kid who reads EVERYTHING and takes it literally. Solved by swapping out <> for $g/lt;.
 
-At time of transfer, HTML was not recognizing the Javascript file at all.
-Plan is to use the original files in cheatsheets as backup while I troubleshoot here until it works.
+Currently references Prism but added a language name assigner in JS for easy swap to other syntax libraries.
+Each language has a safe and robust "torture template" that is easy to edit in pre and in CSS for theme testing.
