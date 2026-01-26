@@ -20,12 +20,10 @@ body {
 
 .header {
     position: relative;
-    top: 5rem;
     text-align: center;
     width: 100%;
     max-width: 1200px;
-    margin: 90px 0;
-    padding-bottom: 20px;
+    margin: 20px 0;
     z-index: 1;
 }
 
@@ -46,7 +44,7 @@ body {
     padding: 25px 0 0 0;
     width: 100%;
     max-width: 375px;
-    margin: 120px auto 0 auto; /*leave this tight for max code space on mobile*/
+    margin: 40px auto 0 auto; /*leave this tight for max code space on mobile*/
 }
 
 @media (min-width: 500px) {
