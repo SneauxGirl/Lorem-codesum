@@ -1,93 +1,55 @@
-// This script is a pencil pusher. No really.
-// It does not evaluate, execute, or summon anything.
-// It only moves text from one safe place to another.
-
-console.log("🚀 SCRIPT.JS IS LOADING!");
-console.log("====================");
-
-// ==========================================
-// MAP LANGUAGES - LOAD TEMPLATES
-// ==========================================
-document.addEventListener("DOMContentLoaded", () => {
-
-  // Map special cases for Prism language class
-    const prismLanguageMap = {
-        golang: "go", // Golang tab maps to Prism 'go'
-        curl: "bash", // Curl tab maps to Prism 'bash'
-        typescript: "typescript", // explicitly include if needed
-        javascript: "javascript",
-        html: "markup",
-        css: "css",
-        python: "python",
-        rust: "rust",
-        elixir: "elixir",
-        java: "java",
-    };
-
-// Setup tabs & default
+//Moved template JS to Cheatsheets to extract name functions, returned this JS to basics from make-it-decaf
+document.addEventListener("DOMContentLoaded", function() {
+    //CODE SWITCHER ANIMATION
     const tabs = document.querySelectorAll(".code-container__tab");
     const codeBlocks = document.querySelectorAll(".code-container__code");
 
-  // Load code from template into a pre/code block
-  function loadCode(language) {
-    const template = document.getElementById(`sample-${language}`);
-    const codeBlock = document.querySelector(
-      `.code-container__code--${language} code`
-    );
-
-    console.log("Loading:", language, template, codeBlock);
-
-    if (!template || !codeBlock) return;
-
-    // Set Prism language class properly
-    const prismLang = prismLanguageMap[language] || language;
-    codeBlock.className = `language-${prismLang}`;
-
-    // Insert template content
-    codeBlock.textContent = template.textContent.trim();
-
-    // Highlight with Prism
-    Prism.highlightElement(codeBlock);
-  }
-
-    // Initialize default tab (first tab active)
-    const defaultTab = document.querySelector(".code-container__tab--active");
-    if (defaultTab) loadCode(defaultTab.getAttribute("data-language"));
-
-    // Tab click handling
     tabs.forEach(tab => {
-      tab.addEventListener("click", () => {
-          const language = tab.dataset.language; //In case you wonder if I'm just vibecoding. Prior typo. Right here.
+        tab.addEventListener("click", function() {
+            const language = this.getAttribute("data-language");
 
-          // Remove all active states
-          tabs.forEach(t => t.classList.remove("code-container__tab--active"));
-          codeBlocks.forEach(c => c.classList.remove("code-container__code--active"));
+            //Remove active class from ALL tabs and code blocks
+            tabs.forEach(t => t.classList.remove("code-container__tab--active"));
+            codeBlocks.forEach(c => c.classList.remove("code-container__code--active"));
 
-          // Activate clicked tab and corresponding code block
-          tab.classList.add("code-container__tab--active");
-          const activeBlock = document.querySelector(`.code-container__code--${language}`);
-          if (activeBlock) activeBlock.classList.add("code-container__code--active");
+            //Add active class only to the clicked tab and corresponsing code block
+            this.classList.add("code-container__tab--active");
+            document.querySelector(`.code-container__code--${language}`).classList.add("code-container__code--active");
 
-          // Load template content safely
-          loadCode(language);
+            //Uses Prism - remember this with theme edits
+            Prism.highlightElement(document.querySelector(`.code-container__code--${language} code`));
         });
     });
+
+    //FOOTER ANIMATION
+    const footer = document.querySelector('.footer__inner');
+    const footerSpans = footer.querySelectorAll('span');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                footerSpans.forEach((span, index) => {
+                    setTimeout (() => {
+                        span.classList.add('animate');
+                    }, index * 100); //delay each letter by 100ms
+                });
+                observer.unobserve(footer); //unobserve after animation triggers
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    observer.observe(footer);
 });
 
-// =====================================
-// COPY CODE - Language-proofed
-// =====================================
+//COPY CODE RESPONDER
 function copyCode() {
-  // Find the currently active code block
-  const activeCodeBlock = document.querySelector(".code-container__code--active code");
-  if (!activeCodeBlock) return;
+    const codeElement = document.querySelector('.code-container__code--active code');
+    const codeText = codeElement.innerText;
 
-  // Copy text to clipboard
-  navigator.clipboard.writeText(activeCodeBlock.textContent)
-    .then(() => {
-      console.log("Code copied to clipboard!");
-    })
-    .catch(err => {
-      console.error("Failed to copy code: ", err);
+    navigator.clipboard.writeText(codeText).then(() => {
+        alert('Code copied to clipboard!');
+    }).catch(err => {
+        console.error('Failed to copy code: ', err);
     });
 }
