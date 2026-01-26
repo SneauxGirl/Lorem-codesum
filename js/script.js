@@ -30,13 +30,13 @@ document.addEventListener("DOMContentLoaded", function() {
             // GET LANGUAGE - PRISM default (use mapping or fallback to original language)
             const prismLanguage = prismLanguageMap[language] || language;
 
-            const codeElement = document.querySelector(`code-container__code--${language} code`); /* Do I need a dash here??*/
+            const codeElement = document.querySelector(`.code-container__code--${language} code`);
             if (codeElement) {
                 //remove original language classes
                 codeElement.className = codeElement.className.replace(/language-\w+/g, '');
                 //add the desired language class - PRISM default
                 codeElement.classList.add(`language-${prismLanguage}`);
-                prismLanguage.highlightElement(codeElement);
+                Prism.highlightElement(codeElement);
             }
         });
     });
