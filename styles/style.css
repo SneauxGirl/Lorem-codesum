@@ -7,7 +7,7 @@ html {
 body {
     font-family: 'Geist Sans', sans-serif;
     background: black;
-    color: #ffffff;
+    color: #d2d2d2;
     margin: 0;
     padding: 0;
     display: flex;
@@ -16,6 +16,26 @@ body {
     height: 100%;
     flex-direction: column;
     overflow-x: hidden;
+    position:relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/circuits.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: none;
+  filter: sepia(40%) hue-rotate(38deg) saturate(100%) brightness(115%);
+  z-index: -1;
+  /* Alt backgrounds for less theme conflict
+ grayscale(100%); sepia(40%) hue-rotate(58deg) saturate(200%);*/
+  opacity: 0.6;
+
 }
 
 h1 {
@@ -34,7 +54,7 @@ p {
     text-align: center;
     width: 100%;
     max-width: 1200px;
-    margin: 20px 0;
+    margin: 40px 0;
     z-index: 1;
 }
 
@@ -47,25 +67,6 @@ p {
     left: 0;
     z-index: -1;
 }
-/* GITPULSE BACKGROUND - TODO: swap in as background for entire body
-.gitPulse__bg {
-    top: 0 px;
-    left: 0;
-    margin: 140px 0 70px 20px;
-    opacity: 0.15;
-    background-image: url("../images/circuits.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-    -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-    -webkit-filter: grayscale(100%);
-    filter: gray;
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-}*/
 
 /* CODE CONTAINER */
 .code-container {
@@ -75,7 +76,7 @@ p {
     padding: 25px 0 0 0;
     width: 100%;
     max-width: 375px;
-    margin: 40px auto 0 auto; /*leave this tight for max code space on mobile*/
+    margin: 0 auto 40px auto; /*leave this tight for max code space on mobile*/
 }
 
 @media (min-width: 500px) {
