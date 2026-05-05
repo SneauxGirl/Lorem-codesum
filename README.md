@@ -4,6 +4,10 @@ Lorem Codesum is a theme tester for ten different codes using HTML, JavaScript, 
 
 ![Lorem Codesum screenshot](images/Lorem-Codesum.png)
 
+## 🚀 Live Demo
+
+[View the App →](https://lorem-codesum.vercel.app)
+
 ## How to Use
 
 1. Download repository and extract 
