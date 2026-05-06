@@ -4,9 +4,15 @@
     --hero-label-color: #d2d2d2;
     --muted-scroll-bg-start: #121110;
     --muted-scroll-bg-end: #070707;
-    --scrollbar-rust: #6e3422;
-    --scrollbar-rust-hover: #8b4630;
-    --scrollbar-track: #1a1716;
+    --scrollbar-rust: #b86b4f;
+    --scrollbar-rust-hover: #d28767;
+    --scrollbar-track: #322a28;
+    --tab-bg: #121212;
+    --tab-bg-hover: #2a2a2a;
+    --tab-border: #323232;
+    --tab-text: #4d4d4d;
+    --tab-text-hover: #d2d2d2;
+    --tab-focus-ring: #8b4630;
 }
 
 html {
@@ -149,17 +155,29 @@ p {
 }
 
 .code-container__tab {
-    background-color: #121212;
+    background-color: var(--tab-bg);
     padding: 10px 15px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    border: 1px solid #323232;
-    color: #4d4d4d;
+    border: 1px solid var(--tab-border);
+    color: var(--tab-text);
     cursor:pointer;
     font-size: 14px;
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.code-container__tab:hover,
+.code-container__tab:focus-visible {
+    background-color: var(--tab-bg-hover);
+    color: var(--tab-text-hover);
+}
+
+.code-container__tab:focus-visible {
+    outline: none;
+    box-shadow: inset 0 0 0 1px var(--tab-border), 0 0 0 2px var(--tab-focus-ring);
 }
 
 .code-container__tab--active {
