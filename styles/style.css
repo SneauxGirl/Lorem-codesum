@@ -1,5 +1,14 @@
 @import url('fonts.css');
 
+:root {
+    --hero-label-color: #d2d2d2;
+    --muted-scroll-bg-start: #121110;
+    --muted-scroll-bg-end: #070707;
+    --scrollbar-rust: #6e3422;
+    --scrollbar-rust-hover: #8b4630;
+    --scrollbar-track: #1a1716;
+}
+
 html {
     width: 100%;
 }
@@ -7,7 +16,7 @@ html {
 body {
     font-family: 'Geist Sans', sans-serif;
     background: black;
-    color: #d2d2d2;
+    color: var(--hero-label-color);
     margin: 0;
     padding: 0;
     display: flex;
@@ -43,6 +52,7 @@ h1 {
     font-weight: 400;
     font-style: normal;
     font-size: 3rem;
+    color: var(--hero-label-color);
 }
 
 p {
@@ -56,6 +66,21 @@ p {
     max-width: 1200px;
     margin: 40px 0;
     z-index: 1;
+}
+
+.hero-github-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+    color: var(--hero-label-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.hero-github-link:hover,
+.hero-github-link:focus-visible {
+    color: #f0f0f0;
 }
 
 .header:before {
@@ -76,7 +101,9 @@ p {
     padding: 25px 0 0 0;
     width: 100%;
     max-width: 375px;
-    margin: 0 auto 40px auto; /*leave this tight for max code space on mobile*/
+    margin: 0 auto 0 auto;
+    position: relative;
+    overflow: hidden;
 }
 
 @media (min-width: 500px) {
@@ -98,6 +125,27 @@ p {
     gap: 0.5rem;
     overflow-x: auto;
     padding: 0 10px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-rust) var(--scrollbar-track);
+}
+
+.code-container__tabs::-webkit-scrollbar {
+    height: 9px;
+}
+
+.code-container__tabs::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 10px;
+}
+
+.code-container__tabs::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-rust);
+    border-radius: 10px;
+    border: 2px solid var(--scrollbar-track);
+}
+
+.code-container__tabs::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-rust-hover);
 }
 
 .code-container__tab {
@@ -126,11 +174,31 @@ p {
 
 .code-container__content {
     position: relative;
-    background: linear-gradient(180deg, #191919, #000000);
+    background: linear-gradient(180deg, var(--muted-scroll-bg-start), var(--muted-scroll-bg-end));
     border-radius: 10px;
     padding: 20px;
     height: 500px;
-    overflow-y: scroll;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-rust) var(--scrollbar-track);
+}
+
+.code-container__content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.code-container__content::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+.code-container__content::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-rust);
+    border-radius: 10px;
+    border: 2px solid var(--scrollbar-track);
+}
+
+.code-container__content::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-rust-hover);
 }
 
 .code-container__code {
